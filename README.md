@@ -1,7 +1,3 @@
-# Desafio-Front-Back-End-Angular6-NodeJS-
-Desafio aplicação simples utilizando Angular 6 (Front-End) e Node.JS Express (Back-End) e MySql (Database)
-
-
 <h1><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"></svg></a>Desafio aplicação simples utilizando Front/Back-End.</h1>
 <h3><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"></svg></a>Tecnologias Usadas: </h3>
 
