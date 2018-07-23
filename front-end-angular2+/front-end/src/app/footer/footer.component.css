@@ -1,0 +1,22 @@
+
+/* --footer-- */
+
+footer {
+    background: #ececec;
+}
+
+/* --logo-style-- */
+
+footer h5 {
+    color: black;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+}
+
+footer h5 span.style-brand {
+    border: 2px double #f33939;
+    font-weight: bolder;
+    color: #bf0c0c;
+}

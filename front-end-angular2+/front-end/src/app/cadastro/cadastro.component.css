@@ -1,0 +1,62 @@
+
+/*form-section*/
+
+.form-section {
+    border-bottom: 3px solid#ecb92c;
+}
+
+/* -- header --*/
+/* --form-wrapper --*/
+
+.form-section header,
+.form-section .form-wrapper .btn {
+    background-color: #ffc50c;
+}
+
+.form-section header .down-arrow i {
+    color: #ffc50c;
+}
+
+/* --header-text icon -- */
+.form-section .header-text i {
+    padding: 8px 8px;
+    font-size: 25px;
+}
+
+/* --form-style --*/
+.form-section .form-wrapper input:focus {
+    border: 1px solid #ffc50c;
+}
+
+.input-group-text {
+    background-color: #ffc50c;
+}
+
+.input-group-text i {
+    color: white;
+}
+
+/* --form-wrapper - Button --*/
+
+.form-section .form-wrapper .btn:hover {
+        background-color: #ffd509;
+}
+
+tooltip-content {
+    display: block!important;
+    background-attachment: black;
+}
+
+/* -- text popup-alert -- */
+
+
+.alert-container {
+    border-radius: 3px;
+    width: 100%;    
+    text-align: center;
+    background: #ffdada;
+}
+
+.alert-container .popup-alert {   
+    font-size: 15px; 
+}

@@ -1,0 +1,11 @@
+#home-section {
+    padding: 50px 0;
+}
+
+/* -- responsive --*/
+
+@media (max-width: 767px) {
+    #home-section .space-mobile-screen {
+        padding: 40px;
+    }
+}

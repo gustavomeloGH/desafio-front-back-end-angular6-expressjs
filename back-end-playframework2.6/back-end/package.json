@@ -1,0 +1,23 @@
+{
+  "author": "Gustavo Melo",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Back-End Desafio",
+  "name": "node-api",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "mongodb-stitch": "^3.1.2",
+    "mongoose": "*",
+    "mysql": "^2.16.0",
+    "request": "^2.74.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

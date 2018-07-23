@@ -1,0 +1,93 @@
+<section id="dashboard">
+
+  <div class="container">
+    <div class="row background-header">
+      <div class="col-lg-4 offset-lg-4">
+        <header class="content-header">
+            <span class="icon-user">
+                <i class="fa fa-id-badge" aria-hidden="true"></i>
+              </span>
+            <div class="content-text">
+                <span>Seja bem vindo, <strong>{{user.nome}}</strong></span><br>
+               <small>
+                   Segue abaixo seus dados cadastrados!
+               </small>
+            </div>
+        </header>
+      </div>
+    </div>
+    <!--row ends-->
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="data-container table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">E-mail</th>
+                          <th scope="col">Data Nascimento</th>
+                          <th scope="col">Cep</th>
+                          <th scope="col">Logradouro</th>
+                          <th scope="col">Estado</th>
+                          <th scope="col">Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <span class="text-info">
+                                        <span >{{user.email}}</span>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-info">
+                                    <span >{{user.dataNascimento}}</span> 
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-info">
+                                    <span >{{user.endereco.cep}}</span> 
+                                </span>
+                              </td>
+                              <td>
+                                <span class="text-info">
+                                    <span >{{user.endereco.logradouro}}</span>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-info">
+                                    <span >{{user.endereco.estado}}</span> 
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-info">
+                                    <span >{{user.endereco.cidade}}</span>
+                                </span>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--row ends-->
+
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <button tyoe="button" class="btn btn-block btn-warning text-white" 
+            (click)="alertRouterMsg()"
+            [routerLink]="['/home']">
+            Voltar
+        </button>
+      </div>  
+      
+    </div>
+    <!--row ends-->
+  </div>
+  <!--container ends-->
+
+
+</section>
+<!--section ends-->
+

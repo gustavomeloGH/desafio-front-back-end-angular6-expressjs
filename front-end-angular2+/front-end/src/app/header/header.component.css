@@ -1,0 +1,39 @@
+/* -- navbar -- */
+.navbar {    
+    background-color: #e5e5e573;
+}
+
+
+/* -- navbar-logo -- */
+
+.navbar-brand h5 {
+    color: black;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Poiret One', cursive!important;
+}
+
+.navbar-brand h5 span.style-brand {
+    border: 2px double #f33939;
+    font-weight: bolder;
+    color: #bf0c0c;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-align: center;
+}
+
+/* -- navbar-list -- */
+.navbar .nav-item i {
+    font-size: 25px;
+}
+
+
+/* -- responsive --*/
+
+@media (max-width: 767px) {
+    .navbar-toggleable-sm {
+      clear: both;
+    }
+  }

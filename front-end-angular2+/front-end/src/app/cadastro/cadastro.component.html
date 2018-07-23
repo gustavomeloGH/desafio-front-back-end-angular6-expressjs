@@ -1,0 +1,186 @@
+<article class="form-section"> 
+  
+    <header>
+      <div class="header-text">
+          <span><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
+          <h3>Cadastro</h3>
+      </div>
+      <span class="down-arrow">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </header>
+    <!--header ends-->
+  
+    <div class="form-wrapper">
+      <form #cadastroForm="ngForm" (ngSubmit)="submitForm()" ngNativeValidate>
+        <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+              </div>
+              <input [(ngModel)]="user.nome" 
+                  id="inputNome" 
+                  name="inputNome"
+                  class="form-control" 
+                  type="text" 
+                  placeholder="Nome" 
+                  pattern="[A-Za-zÀ-ú\s]+$" 
+                  minlength="3" 
+                  maxlength="60" 
+                  required="true" 
+                  title="*O nome deve apenas ter letras e no mínimo 3 caracteres!"/>
+            </div> 
+        </div>   
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.email"  
+                  id="inputEmail" 
+                  name="inputEmail"
+                  class="form-control" 
+                  type="email"
+                  placeholder="E-mail"
+                  pattern="[a-z0-9][a-z0-9._%+-]*@[a-z0-9][a-z0-9.-]*\.[a-z]{2,20}" 
+                  required="true"
+                  title="*Digite um e-mail válido!"/>
+          </div> 
+        </div>  
+
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.senha" 
+                  id="inputSenha" 
+                  name="inputSenha" 
+                  class="form-control" 
+                  type="password" 
+                  placeholder="Senha"
+                  minlength="6" 
+                  maxlength="30" 
+                  required="true">
+          </div> 
+        </div>  
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="confirmacaoSenha" 
+                  id="inputSenhaConfirm" 
+                  name="inputSenhaConfirm" 
+                  class="form-control"  
+                  type="password" 
+                  placeholder="Confirmação de senha"
+                  minlength="6" 
+                  maxlength="30" 
+                  required="true">
+          </div> 
+        </div>  
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+            </div>
+              <input [(ngModel)]="dataNasc"
+                      id="inputNasc"
+                      name="inputNasc"
+                      class="form-control"
+                      type="text" 
+                      placeholder="Data nascimento" 
+                      required="true"
+                      bsDatepicker
+                      [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"/>
+          </div> 
+        </div> 
+
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.endereco.cep" 
+                    id="inputCep" 
+                    name="inputCep" 
+                    class="form-control" 
+                    type="text" 
+                    placeholder="CEP" 
+                    minlength="8" 
+                    maxlength="10" 
+                    required="true"
+                    (ngModelChange)="searchCep()"/>
+          </div> 
+            <div class="alert-container"><span *ngIf="showAlertCep" class="text-danger popup-alert">Digite primeiro seu CEP corretamente!</span></div>
+        </div> 
+
+        <div class="form-group">
+          <div class="input-group" (click)="checkShowAlertCep()">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-road" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.endereco.logradouro" 
+                   id="inputLogradouro"  
+                   name="inputLogradouro" 
+                   class="form-control" 
+                   type="text" 
+                   placeholder="Logradouro" 
+                   required="true"
+                   [disabled]="isDisabled()">
+          </div>
+        </div> 
+
+        <div class="form-group">
+          <div class="input-group" (click)="checkShowAlertCep()">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-map" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.endereco.estado" 
+                   id="inputEstado"
+                   name="name"
+                   class="form-control"  
+                   type="text" 
+                   placeholder="Estado"
+                   required="true"
+                  [disabled]="isDisabled()">
+          </div>
+        </div> 
+          
+
+        <div class="form-group">
+          <div class="input-group" (click)="checkShowAlertCep()">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+            </div>
+            <input [(ngModel)]="user.endereco.cidade"
+                   id="inputCidade"
+                   name="inputCidade"
+                   class="form-control"
+                   type="text"   
+                   placeholder="Cidade"
+                   required="true"
+                   [disabled]="isDisabled()">
+          </div>
+        </div> 
+      
+        <div class="submit-button text-center">
+            <button type="submit" class="btn btn-block">
+                Cadastro
+            </button>
+        </div>
+
+      </form>
+      <!--form ends-->
+
+    </div>
+    <!--form-wrapper ends-->
+    
+  </article>
+  <!--article ends-->

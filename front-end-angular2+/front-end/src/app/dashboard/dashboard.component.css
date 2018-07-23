@@ -1,0 +1,47 @@
+/* --- TABLE -- */
+
+.data-container  {
+    margin-bottom: 80px;
+
+}
+
+.data-container .text-info {
+    color: #898989!important;
+    font-weight: 500;
+}
+
+/* -- CONTENT-HEADER --*/
+
+.background-header {
+    background: #f2f2f27a;
+    margin-top: 50px;
+    padding: 25px 0;
+    margin-bottom: 40px;
+}
+
+
+header.content-header {
+    text-align: center;
+}
+
+header.content-header i {
+    font-size: 120px;
+    color: #2dd7fc;
+}
+
+header.content-header .content-text {
+    padding: 20px 0 0;
+    font-size: 24px;
+}
+
+header.content-header .content-text small {
+    font-size: 16px;
+}
+
+/* -- button -- */
+
+button.btn {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 50px;
+}

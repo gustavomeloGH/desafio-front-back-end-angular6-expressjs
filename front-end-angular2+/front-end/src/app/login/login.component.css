@@ -1,0 +1,45 @@
+
+/*form-section*/
+
+.form-section {
+    border-bottom: 3px solid#1c817c;
+}
+
+/* -- header --*/
+/* --form-wrapper --*/
+
+.form-section header,
+.form-section .form-wrapper .btn {
+    background-color: #2cc2e3;
+}
+
+.form-section header .down-arrow i {
+    color: #2cc2e3;
+}
+
+/* --header-text icon -- */
+.form-section .header-text i {
+    font-size: 30px;
+    padding: 6px 14px;
+}
+
+/* --form-style --*/
+
+.form-section .form-wrapper input:focus {
+    border: 1px solid #2cc2e3;
+}
+
+.input-group-text {
+    background-color: #2cc2e3;
+}
+
+.input-group-text i {
+    color: white;
+}
+
+
+/* --form-wrapper - Button --*/
+
+.form-section .form-wrapper .btn:hover {
+    background-color: #00d0fe;
+}
