@@ -10,7 +10,7 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 To run you need:
 cd back-end
 npm install
-npm start
+node server.js
 ```
 
 Your app should now be running on [localhost:8000](http://localhost:8000/).
